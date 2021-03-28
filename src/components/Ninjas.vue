@@ -4,7 +4,7 @@
       <li
         v-for="(ninja, index) in ninjas"
         :key="index"
-        v-on:click="ninja.show = !ninjas.show"
+        v-on:click="ninja.show = !ninja.show"
       >
         <h2>{{ ninja.name }}</h2>
         <h3 v-show="ninja.show">{{ ninja.speciality }}</h3>
