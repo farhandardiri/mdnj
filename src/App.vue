@@ -1,26 +1,20 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <ninjas></ninjas>
+    <app-header></app-header>
   </div>
 </template>
 
 <script>
-import Ninjas from "./components/Ninjas";
+import Header from "./components/Header";
 export default {
   components: {
-    ninjas: Ninjas,
+    "app-header": Header,
   },
   data() {
-    return {
-      title: "Ninja App",
-    };
+    return {};
   },
 };
 </script>
 
 <style scoped>
-h1 {
-  color: purple;
-}
 </style>
