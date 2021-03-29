@@ -22,7 +22,7 @@ export default {
     changeTitle: function () {
       // this.$emit("changeTitle", "Oi Blink");
       this.title = "Panggil Aku Blink";
-      bus.$emit("titleChange", "Pangil Aku Blink");
+      bus.$emit("titleChanged", "Pangil Aku Blink");
     },
   },
 };
