@@ -1,42 +1,17 @@
 <template>
-  <div>
-    <app-header
-      v-bind:title="title"
-      @changeTitle="updateTitle($event)"
-    ></app-header>
-    <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
-    <app-footer v-bind:title="title"></app-footer>
-  </div>
+  <div></div>
 </template>
 
 <script>
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Ninjas from "./components/Ninjas";
+import formHelper from "./components/FormHelper";
 export default {
   components: {
-    "app-header": Header,
-    "app-footer": Footer,
-    "app-ninjas": Ninjas,
+    "form-helper": formHelper,
   },
   data() {
-    return {
-      ninjas: [
-        { name: "Blink", speciality: "Vue Components", show: false },
-        { name: "Queen", speciality: "Rizqi Aulia Nadhifah", show: false },
-        { name: "Ryu", speciality: "Click Events", show: false },
-        { name: "Izzat", speciality: "Sound System", show: false },
-        { name: "Dani", speciality: "Photograpy", show: false },
-        { name: "Hendra", speciality: "Kepala Asrama", show: false },
-      ],
-      title: "Vue",
-    };
+    return {};
   },
-  methods: {
-    updateTitle: function (updatedTitle) {
-      this.title = updatedTitle;
-    },
-  },
+  methods: {},
 };
 </script>
 
