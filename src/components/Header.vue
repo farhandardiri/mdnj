@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     changeTitle: function () {
-      this.title = "Panggil aku BlinK";
+      this.$emit("changeTitle", "Oi Blink");
     },
   },
 };
