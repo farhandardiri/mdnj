@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <form-helper>
       <div slot="form-header">
         <h3>This is the title of the form</h3>
@@ -13,18 +13,30 @@
         <button @click="handleSubmit">Submit</button>
       </div>
     </form-helper>
+  </div> -->
+  <div>
+    <keep-alive>
+      <component v-bind:is="component"></component>
+    </keep-alive>
+    <button @click="component = 'form-one'">Show form one</button>
+    <button @click="component = 'form-two'">Show form two</button>
   </div>
 </template>
 
 <script>
-import formHelper from "./components/FormHelper";
+// import formHelper from "./components/FormHelper";
+import formOne from "./components/formOne";
+import formTwo from "./components/formTwo";
 export default {
   components: {
-    "form-helper": formHelper,
+    // "form-helper": formHelper,
+    "form-one": formOne,
+    "form-two": formTwo,
   },
   data() {
     return {
-      title: "I am Dinamic Slot Title",
+      // title: "I am Dinamic Slot Title",
+      component: "form-two",
     };
   },
   methods: {},
