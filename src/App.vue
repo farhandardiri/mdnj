@@ -14,34 +14,43 @@
       </div>
     </form-helper>
   </div> -->
-  <div>
+  <!-- <div>
     <keep-alive>
       <component v-bind:is="component"></component>
     </keep-alive>
     <button @click="component = 'form-one'">Show form one</button>
     <button @click="component = 'form-two'">Show form two</button>
+  </div> -->
+  <div>
+    <add-blog></add-blog>
   </div>
 </template>
 
 <script>
 // import formHelper from "./components/FormHelper";
-import formOne from "./components/formOne";
-import formTwo from "./components/formTwo";
+// import formOne from "./components/formOne";
+// import formTwo from "./components/formTwo";
+import AddBlog from "./components/addBlog";
 export default {
   components: {
     // "form-helper": formHelper,
-    "form-one": formOne,
-    "form-two": formTwo,
+    // "form-one": formOne,
+    // "form-two": formTwo,
+    "add-blog": AddBlog,
   },
   data() {
     return {
       // title: "I am Dinamic Slot Title",
-      component: "form-two",
+      // component: "form-two",
     };
   },
   methods: {},
 };
 </script>
 
-<style scoped>
+<style >
+body {
+  margin: 0;
+  font-family: "Nunito SemiBold";
+}
 </style>
