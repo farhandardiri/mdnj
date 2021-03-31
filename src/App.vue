@@ -22,7 +22,8 @@
     <button @click="component = 'form-two'">Show form two</button>
   </div> -->
   <div>
-    <add-blog></add-blog>
+    <!-- <add-blog></add-blog> -->
+    <show-blogs></show-blogs>
   </div>
 </template>
 
@@ -30,13 +31,15 @@
 // import formHelper from "./components/FormHelper";
 // import formOne from "./components/formOne";
 // import formTwo from "./components/formTwo";
-import AddBlog from "./components/addBlog";
+import addBlog from "./components/addBlog";
+import showBlogs from "./components/showBlog";
 export default {
   components: {
     // "form-helper": formHelper,
     // "form-one": formOne,
     // "form-two": formTwo,
-    "add-blog": AddBlog,
+    "add-blog": addBlog,
+    "show-blogs": showBlogs,
   },
   data() {
     return {
@@ -51,6 +54,6 @@ export default {
 <style>
 body {
   margin: 0;
-  font-family: "Nunito Semi Bold";
+  font-family: "Nunito SemiBold";
 }
 </style>
