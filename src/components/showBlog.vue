@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import searchMixin from "../mixins/searchMixins";
+
 export default {
   components: {},
   data() {
@@ -46,6 +48,7 @@ export default {
       },
     },
   },
+  mixins: [searchMixin],
 };
 </script>
 
