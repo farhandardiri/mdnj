@@ -9,7 +9,7 @@
       class="single-blog"
     >
       <!-- <h2 v-rainbow>{{ blog.title }}</h2> -->
-      <h2>{{ blog.title | upper }}</h2>
+      <h2 v-rainbow>{{ blog.title | toUppercase }}</h2>
       <article>{{ blog.body | snipped }}</article>
     </div>
   </div>
@@ -38,6 +38,18 @@ export default {
       return this.blogs.filter((blog) => {
         return blog.title.match(this.search);
       });
+    },
+  },
+  filters: {
+    toUppercase(value) {
+      return value.toUpperCase();
+    },
+  },
+  directives: {
+    rainbow: {
+      bind(el, binding, vnode) {
+        el.style.color = "#" + Math.random().toString().slice(2, 8);
+      },
     },
   },
 };
