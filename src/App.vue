@@ -24,6 +24,7 @@
   <div>
     <!-- <add-blog></add-blog> -->
     <show-blogs></show-blogs>
+    <list-blogs></list-blogs>
   </div>
 </template>
 
@@ -33,6 +34,7 @@
 // import formTwo from "./components/formTwo";
 import addBlog from "./components/addBlog";
 import showBlogs from "./components/showBlog";
+import listBlogs from "./components/listBlog";
 export default {
   components: {
     // "form-helper": formHelper,
@@ -40,6 +42,7 @@ export default {
     // "form-two": formTwo,
     "add-blog": addBlog,
     "show-blogs": showBlogs,
+    "list-blogs": listBlogs,
   },
   data() {
     return {
