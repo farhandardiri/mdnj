@@ -11,6 +11,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueResource)
 Vue.use(VueRouter)
 
+const router = VueRouter
 // awal filter
 
 Vue.filter('snipped', function(value){
