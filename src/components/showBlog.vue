@@ -12,7 +12,7 @@
       <router-link :to="'/blog/' + blog.id">
         <h2>{{ blog.title | toUppercase }}</h2>
       </router-link>
-      <article>{{ blog.body | snipped }}</article>
+      <article>{{ blog.content | snipped }}</article>
     </div>
   </div>
 </template>
@@ -31,10 +31,21 @@ export default {
   methods: {},
   created() {
     this.$http
-      .get("https://jsonplaceholder.typicode.com/posts")
+      .get("https://blink-netninja-default-rtdb.firebaseio.com/posts.json")
       .then(function (data) {
-        // console.log(data);
-        this.blogs = data.body.slice(0, 10);
+        // console.log(data.json());
+        return data.json();
+        // this.blogs = data.body.slice(0, 10);
+      })
+      .then(function (data) {
+        var blogsArray = [];
+        for (let key in data) {
+          // console.log(data[key]);
+          data[key].id = key;
+          blogsArray.push(data[key]);
+        }
+        // console.log(blogsArray);
+        this.blogs = blogsArray;
       });
   },
   computed: {},
