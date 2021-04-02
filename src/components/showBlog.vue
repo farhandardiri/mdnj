@@ -9,7 +9,9 @@
       class="single-blog"
     >
       <!-- <h2 v-rainbow>{{ blog.title }}</h2> -->
-      <h2 v-rainbow>{{ blog.title | toUppercase }}</h2>
+      <router-link :to="'/blog/' + blog.id">
+        <h2>{{ blog.title | toUppercase }}</h2>
+      </router-link>
       <article>{{ blog.body | snipped }}</article>
     </div>
   </div>

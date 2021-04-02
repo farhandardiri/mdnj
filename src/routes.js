@@ -1,9 +1,9 @@
 import showBlogs from './components/showBlog'
 import addBlog from './components/addBlog'
-import sigleBlog from './components/sigleBlog'
+import singleBlog from './components/singleBlog'
 
 export default [
     {path:'/', component:showBlogs},
     {path:'/add', component:addBlog},
-    {path:'blog/:id', component:sigleBlog}
+    {path:'/blog/:id', component:singleBlog}
 ]
