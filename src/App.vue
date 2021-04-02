@@ -25,6 +25,7 @@
     <!-- <add-blog></add-blog> -->
     <!-- <show-blogs></show-blogs>
     <list-blogs></list-blogs> -->
+    <app-header></app-header>
     <router-view></router-view>
   </div>
 </template>
@@ -36,6 +37,7 @@
 import addBlog from "./components/addBlog";
 import showBlogs from "./components/showBlog";
 import listBlogs from "./components/listBlog";
+import header from "./components/Header";
 export default {
   components: {
     // "form-helper": formHelper,
@@ -44,6 +46,7 @@ export default {
     "add-blog": addBlog,
     "show-blogs": showBlogs,
     "list-blogs": listBlogs,
+    "app-header": header,
   },
   data() {
     return {
